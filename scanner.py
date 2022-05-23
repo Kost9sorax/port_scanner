@@ -5,7 +5,7 @@ import config
 log = logging.getLogger()
 
 
-class BadIpError(Exception):
+class IncorrectIpError(Exception):
     pass
 
 
@@ -23,7 +23,7 @@ def scan_port(ip: str, port: int) -> bool:
             return False
     except socket.gaierror:
         log.debug(f'Incorrect ip {ip}')
-        raise BadIpError
+        raise IncorrectIpError
     except Exception as e:
         log.error(f'Error on check port: {e}')
         raise

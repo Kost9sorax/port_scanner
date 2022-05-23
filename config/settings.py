@@ -17,12 +17,12 @@ LOG_SETTINGS = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
-        'loggers': {
-            '': {
-                'handlers': ['stdout'],
-                'level': logging.DEBUG,
-                'propagate': True,
-            },
-        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['stdout'],
+            'level': logging.DEBUG,
+            'propagate': True,
+        },
     }
 }
