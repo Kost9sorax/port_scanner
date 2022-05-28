@@ -26,4 +26,4 @@ def scan_port(ip: str, port: int) -> bool:
         raise IncorrectIpError
     except Exception as e:
         log.error(f'Error on check port: {e}')
-        raise
+        raise Exception
